@@ -949,7 +949,10 @@ class Mega:
             't': target_node_id,
             'i': self.request_id
         })
-
+    def logout(self):
+        res = self._api_request({'a': 'sml'})
+        self.sid = None
+        return res
     def add_contact(self, email):
         """
         Add another user to your mega contact list
