@@ -734,8 +734,8 @@ class Mega:
                 mac_str = mac_encryptor.encrypt(encryptor.encrypt(block))
 
                 file_info = os.stat(temp_output_file.name)
-                logger.info('%s of %s downloaded', file_info.st_size,
-                            file_size)
+                #logger.info('%s of %s downloaded', file_info.st_size,
+                            #file_size)
             file_mac = str_to_a32(mac_str)
             # check mac integrity
             if (file_mac[0] ^ file_mac[1],
