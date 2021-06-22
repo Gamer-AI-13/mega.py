@@ -630,7 +630,7 @@ class Mega:
         nodes = self.get_files()
         return self.get_folder_link(nodes[node_id])
 
-    asnyc def download_url(self, url, dest_path=None, dest_filename=None):
+    async def download_url(self, url, dest_path=None, dest_filename=None):
         """
         Download a file by it's public url
         """
