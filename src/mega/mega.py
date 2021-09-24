@@ -13,7 +13,7 @@ import random
 import binascii
 import tempfile
 import shutil
-
+import asyncio
 import requests
 from tenacity import retry, wait_exponential, retry_if_exception_type
 
@@ -986,7 +986,7 @@ class Mega:
                 'i': self.request_id
             })
 
-    def get_public_url_info(self, url):
+    async def get_public_url_info(self, url):
         """
         Get size and name from a public url, dict returned
         """
